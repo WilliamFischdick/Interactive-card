@@ -2,6 +2,10 @@
 @import url("main.css");
 
 
+body {
+    font-family: var(--principalfont);
+}
+
 :root {
 
     /* Colors */

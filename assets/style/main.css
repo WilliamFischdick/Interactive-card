@@ -1,0 +1,84 @@
+
+
+.container__cartao {
+    background-image: url("../img/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 220px;
+}
+
+.card-1 {
+    background-image: url("../img/bg-card-back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 270px;
+    height: 148px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: center;
+    top: 2em;
+    left: 6.5em;
+}
+
+.cvc_cartao {
+    padding-right: 3.5em;
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.card-2 {
+    background-image: url("../img/bg-card-front.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 270px;
+    height: 148px;
+    position: relative;
+    top: 7.25em;
+    left: 1.6em;
+}
+
+.card__logo {
+    width: 20%;
+    padding: 1em 0 0 1em;
+}
+
+.conteudo-meio__cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+}
+
+.conteudo-final__cartao {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1.5em;
+    align-items: flex-end;
+    gap: 2em;
+}
+
+.numero__cartao {
+    color: var(--white);
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.nome__cliente {
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+
+}
+
+.validade__cartao {
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
