@@ -1,0 +1,19 @@
+
+@import url("main.css");
+
+
+:root {
+
+    /* Colors */
+
+    --active-border: linear-gradient(90deg, #6448fe, #600594); 
+    --input-error: #ff5252;
+    --white: #ffffff;
+    --light-grayish-violet: #dedddf;
+    --dark-grayish-violet: #8e8593;
+    --very-dark-violet: #21092f;
+
+    /* Font */
+
+    --principalfont: "Space Grotesk";
+}
