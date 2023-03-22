@@ -3,7 +3,7 @@
 .container__cartao {
     background-image: url("../img/bg-main-mobile.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     width: 100%;
     height: 220px;
 }
@@ -110,12 +110,14 @@
 
 .dados__finais-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 74px 70px 166px;
     padding-bottom: 2em;
-    
+    align-items: center;
+    column-gap: 8px;
 }
+
 .dados-finais__input {
-    width: 63px;
+   
     height: 30px;
     border-color: var(--light-grayish-violet);
     border-radius: 5px;
@@ -138,3 +140,4 @@
     border-radius: 5px;
     letter-spacing: 1px;
 }
+

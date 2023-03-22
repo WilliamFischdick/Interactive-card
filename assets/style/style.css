@@ -1,5 +1,6 @@
 
 @import url("main.css");
+@import url("desktop.css");
 
 
 body {
@@ -10,7 +11,7 @@ body {
 
     /* Colors */
 
-    --active-border: linear-gradient(90deg, #6448fe, #600594); 
+    --active-border:#6448fe; 
     --input-error: #ff5252;
     --white: #ffffff;
     --light-grayish-violet: #dedddf;

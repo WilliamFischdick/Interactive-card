@@ -1,0 +1,84 @@
+
+@media screen and (min-width: 1440px) {
+    
+    main {
+        display: flex;
+        gap: 20em;
+
+    }
+    
+    .container__cartao {
+        width: 464px;
+        height: 969px;
+        background-size: 100% 100%;
+    }
+
+    .card-1 {
+        width: 405px;
+        height: 222px;
+        top: 32em;
+        left: 16em;
+    }
+
+    .cvc_cartao {
+        font-size: 14px;
+    }
+
+    .card-2 {
+        width: 405px;
+        height: 222px;
+        top: 16em;
+        left: 10em;
+    }
+
+    .numero__cartao {
+        font-size: 24px;
+    }
+
+    .nome__cliente,
+    .validade__cartao {
+        font-size: 14px;
+    }
+
+    .conteudo-meio__cartao {
+        padding-top: 4em;
+    }
+
+    .conteudo-final__cartao {
+        padding-top: 2em;
+    }
+
+    .input__container {
+        justify-content: center;
+    }
+
+    .input__container {
+        width: 380px;
+        height: 755px;
+    }
+
+    .dados__input {
+        width: 374px;
+        height: 35px;
+    }
+
+    .dados-finais__input {
+        height: 35px;
+    }
+    
+    .cvc {
+        width: 214px;
+    }
+
+    .btn-confirm {
+        width: 380px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: var(--active-border);
+        
+    }
+}
