@@ -27,7 +27,6 @@
     padding-right: 3.5em;
     color: var(--white);
     font-size: 10px;
-    font-weight: 500;
 }
 
 .card-2 {
@@ -69,7 +68,7 @@
 }
 
 .nome__cliente {
-    color: var(--white);
+    color: var(--light-grayish-violet);
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 1px;
@@ -77,8 +76,65 @@
 }
 
 .validade__cartao {
-    color: var(--white);
+    color: var(--light-grayish-violet);
     text-transform: uppercase;
     font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.input__container {
+    display: flex;
+    flex-direction: column;
+    padding: 6em 2em 3em 2em;
+}
+
+.dados__cartao,
+.dados__finais {
+    color: var(--very-dark-violet);
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    padding: 1em 0 0.5em 0;
+    text-align: left;
+    font-weight: bold;
+}
+
+.dados__input {
+    width: 320px;
+    height: 30px;
+    border-color: var(--light-grayish-violet);
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.dados__finais-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 2em;
+    
+}
+.dados-finais__input {
+    width: 63px;
+    height: 30px;
+    border-color: var(--light-grayish-violet);
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.cvc {
+    width: 160px;
+}
+
+.btn-confirm {
+    width: 326px;
+    height: 50px;
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    font-size: 17px;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 5px;
     letter-spacing: 1px;
 }
