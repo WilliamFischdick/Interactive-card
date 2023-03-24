@@ -30,16 +30,16 @@
         </div>
         <section class="input__container">
             <span class="dados__cartao">Cardholder name</span>
-            <input type="text" class="dados__input">
+            <input type="text" class="dados__input" placeholder="e.g. Jane Appleseed">
             <span class="dados__cartao">Card number</span>
-            <input type="text" class="dados__input">
+            <input type="text" class="dados__input" placeholder="e.g. 1234 5678 9123 0000">
             <div class="dados__finais-container">
                 <span class="dados__finais">Exp. Date</span>
                 <span class="dados__finais">(mm/yy)</span>
                 <span class="dados__finais">CVC</span>
-                <input type="number" class="dados-finais__input exp">
-                <input type="number" class="dados-finais__input">
-                <input type="number" class="dados-finais__input cvc">
+                <input type="text" class="dados-finais__input exp" placeholder="MM" maxlength="2"> 
+                <input type="text" class="dados-finais__input" placeholder="YY" maxlength="2">
+                <input type="text" class="dados-finais__input cvc" placeholder="CVC" maxlength="3">
             </div>
             <button class="btn-confirm">Confirm</button>
         </section>

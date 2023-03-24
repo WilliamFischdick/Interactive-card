@@ -76,9 +76,4 @@
         cursor: pointer;
     }
 
-    input:focus {
-        outline: none;
-        border-color: var(--active-border);
-        
-    }
 }

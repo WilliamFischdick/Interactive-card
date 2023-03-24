@@ -141,3 +141,17 @@
     letter-spacing: 1px;
 }
 
+input:focus {
+    outline: none;
+    border-color: var(--active-border);
+    
+    
+}
+
+::placeholder{
+    padding-left: 1em;
+    color: var(--dark-grayish-violet);
+    font-weight: 300;
+    font-size: 14px;
+    font-family: var(--principalfont);
+}
