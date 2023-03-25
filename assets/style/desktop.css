@@ -47,12 +47,9 @@
     .conteudo-final__cartao {
         padding-top: 2em;
     }
-
+    
     .input__container {
         justify-content: center;
-    }
-
-    .input__container {
         width: 380px;
         height: 755px;
     }
@@ -75,5 +72,18 @@
         height: 50px;
         cursor: pointer;
     }
+
+    .thx__container {
+        justify-content: center;
+        width: 380px;
+        height: 755px;
+    }
+    
+    .btn-confirm-thx {
+        width: 380px;
+        height: 50px;
+        cursor: pointer;
+    }
+    
 
 }
