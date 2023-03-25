@@ -155,3 +155,23 @@ input:focus {
     font-size: 14px;
     font-family: var(--principalfont);
 }
+
+.thx__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 326px;
+    height: 425.5px;
+    padding: 6em 2em 3em 2em;
+    /*
+    position: absolute;
+    top:10em;
+    
+    */
+}
+
+.thx__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
