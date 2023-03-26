@@ -10,38 +10,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/style.css">
+    <script src="assets/js/main.js" defer></script>
 </head>
 <body>
     <main>
         <div class="container__cartao">
             <section class="card-1">
-                <span class="cvc_cartao">000</span>
+                <span class="cvc_cartao" id="cvc_card">000</span>
             </section>
             <section class="card-2">
                 <img src="assets/img/card-logo.svg" alt="Card Logo" class="card__logo">
                 <div class="conteudo-meio__cartao">
-                    <span class="numero__cartao">0000 0000 0000 0000</span>
+                    <span class="numero__cartao" id="number_card">0000 0000 0000 0000</span>
                     <div class="conteudo-final__cartao">
-                        <span class="nome__cliente">Cardholder name</span>
-                        <span class="validade__cartao">00/00</span>
+                        <span class="nome__cliente" id="name_card">Cardholder name</span>
+                        <div class="exp__container">
+                            <span class="validade__cartao-mes" id="exp_card-month">00</span>
+                            <span class="exp__bar">/</span>
+                            <span class="validade__cartao-ano" id="exp_card-year">00</span>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
         <section class="input__container">
             <span class="dados__cartao">Cardholder name</span>
-            <input type="text" class="dados__input" placeholder="e.g. Jane Appleseed">
+            <input type="text" class="dados__input" id="input_name" oninput="printName(this.value)" placeholder="e.g. Jane Appleseed">
+            <span class="warning__text" id="warning_name">Can't be blank</span>
             <span class="dados__cartao">Card number</span>
-            <input type="text" class="dados__input" placeholder="e.g. 1234 5678 9123 0000">
+            <input type="text" class="dados__input" id="input_number_card" oninput="maskCard(this), printNumber(this.value)" placeholder="e.g. 1234 5678 9123 0000">
+            <span class="warning__text" id="warning_number">Can't be blank</span>
             <div class="dados__finais-container">
-                <span class="dados__finais">Exp. Date</span>
+                <span class="dados__finais exp-text">Exp. Date</span>
                 <span class="dados__finais">(mm/yy)</span>
                 <span class="dados__finais">CVC</span>
-                <input type="text" class="dados-finais__input exp" placeholder="MM" maxlength="2"> 
-                <input type="text" class="dados-finais__input" placeholder="YY" maxlength="2">
-                <input type="text" class="dados-finais__input cvc" placeholder="CVC" maxlength="3">
+                <input type="text" class="dados-finais__input exp" id="input_month" oninput="printMonth(this.value)" placeholder="MM" maxlength="2">
+                <input type="text" class="dados-finais__input" id="input_year" oninput="printYear(this.value)" placeholder="YY" maxlength="2">
+                <span class="warning__text month-warning" id="warning_exp">Can't be blank</span> 
+                <input type="text" class="dados-finais__input cvc" id="input_cvc" oninput="printCvc(this.value)" placeholder="CVC" maxlength="3">
+                <span class="warning__text cvc-warning" id="warning_cvc">Can't be blank</span>
             </div>
-            <button class="btn-confirm">Confirm</button>
+            <button class="btn-confirm" id="btn_confirm_card">Confirm</button>
         </section>
         <section class="thx__container">
             <div class="thx__content">
@@ -49,7 +58,7 @@
                 <span class="thx">Thank you!</span>
                 <span class="thx__text">We've added your card details</span>
             </div>
-            <button class="btn-confirm-thx">Confirm</button>
+            <button class="btn-continue-thx" id="btn_continue_thx">Continue</button>
         </section>
     </main>
 </body>

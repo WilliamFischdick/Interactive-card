@@ -75,7 +75,13 @@
 
 }
 
-.validade__cartao {
+.exp__container {
+    display: flex;
+}
+
+.validade__cartao-mes,
+.validade__cartao-ano,
+.exp__bar {
     color: var(--light-grayish-violet);
     text-transform: uppercase;
     font-size: 11px;
@@ -115,6 +121,21 @@
     padding-bottom: 2em;
     align-items: center;
     column-gap: 8px;
+}
+
+.month-warning {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    width: 80px;
+}
+
+.cvc-warning {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
 
 .dados-finais__input {
@@ -188,7 +209,7 @@ input:focus {
     letter-spacing: 1px;
 }
 
-.btn-confirm-thx {
+.btn-continue-thx {
     width: 326px;
     height: 50px;
     background-color: var(--very-dark-violet);
@@ -198,4 +219,11 @@ input:focus {
     border-style: none;
     border-radius: 5px;
     letter-spacing: 1px;
+}
+
+.warning__text {
+    font-size: 11px;
+    color: var(--input-error);
+    padding-top: .3em;
+    display: none;
 }

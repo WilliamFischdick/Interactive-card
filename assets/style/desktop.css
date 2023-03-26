@@ -36,7 +36,9 @@
     }
 
     .nome__cliente,
-    .validade__cartao {
+    .validade__cartao-mes,
+    .validade__cartao-ano,
+    .exp__bar {
         font-size: 14px;
     }
 
@@ -79,7 +81,7 @@
         height: 755px;
     }
     
-    .btn-confirm-thx {
+    .btn-continue-thx {
         width: 380px;
         height: 50px;
         cursor: pointer;
