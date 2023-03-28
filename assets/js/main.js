@@ -13,7 +13,7 @@ const inputNumberCard = document.querySelector('#input_number_card');
 const inputMonth = document.querySelector('#input_month');
 const inputYear = document.querySelector('#input_year');
 const inputCvc = document.querySelector('#input_cvc');
-
+const inputs = document.querySelectorAll('.input');
 
 /* Warnings */
 
@@ -21,7 +21,7 @@ const warningName = document.querySelector('#warning_name');
 const warningNumber = document.querySelector('#warning_number');
 const warningExp = document.querySelector('#warning_exp');
 const warningCvc = document.querySelector('#warning_cvc');
-
+const warnings = document.querySelectorAll('.warning__text');
 
 /* Buttons */
 
@@ -36,7 +36,7 @@ const thxContainer = document.querySelector('.thx__container');
 /* Functions*/ 
 
 function confirmInput() {
-    thxContainer.style.display = "block";
+    thxContainer.style.display = "flex";
     inputContainer.style.display = "none";
 }
 
@@ -85,7 +85,7 @@ function printCvc(inputCvc) {
 
 /* Card number restrictions */
 
-function maskCard(i){
+function maskCard(i) {
    
     let v = i.value;
     
@@ -98,24 +98,29 @@ function maskCard(i){
     if (v.length == 4) i.value += " ";
     if (v.length == 9) i.value += " ";
     if (v.length == 14) i.value += " ";
- 
 }
 
 /* Events */
 
-btnConfirmCard.addEventListener('click', () =>{
-    if (inputName.value==""||inputNumberCard.value==""||inputMonth.value==""||inputYear.value==""||inputCvc=="") {
-        warningName.style.display = "block";
-        warningNumber.style.display = "block";
-        warningExp.style.display = "block";
-        warningCvc.style.display = "block";
-    } else {
+btnConfirmCard.addEventListener('click', () => {
+    let valida = 0;
+
+    inputs.forEach((input, index) => {
+        if (input.value === "") {
+            warnings[index].style.display = "block";
+            valida++;
+        }
+    });
+
+    if (valida === 0) {
         confirmInput();
     }
 });
 
-btnContinueThx.addEventListener('click', () =>{
-    inputContainer.style.display = block;
-    thxContainer.style.display = none;
+btnContinueThx.addEventListener('click', () => {
+
+    thxContainer.style.display = "none";
+    inputContainer.style.display = "flex";
+    
     clearInput();
 });

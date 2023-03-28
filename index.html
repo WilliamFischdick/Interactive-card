@@ -35,19 +35,20 @@
         </div>
         <section class="input__container">
             <span class="dados__cartao">Cardholder name</span>
-            <input type="text" class="dados__input" id="input_name" oninput="printName(this.value)" placeholder="e.g. Jane Appleseed">
+            <input type="text" class="dados__input input" id="input_name" oninput="printName(this.value)" placeholder="e.g. Jane Appleseed">
             <span class="warning__text" id="warning_name">Can't be blank</span>
             <span class="dados__cartao">Card number</span>
-            <input type="text" class="dados__input" id="input_number_card" oninput="maskCard(this), printNumber(this.value)" placeholder="e.g. 1234 5678 9123 0000">
+            <input type="text" class="dados__input input" id="input_number_card" oninput="maskCard(this), printNumber(this.value)" placeholder="e.g. 1234 5678 9123 0000">
             <span class="warning__text" id="warning_number">Can't be blank</span>
             <div class="dados__finais-container">
                 <span class="dados__finais exp-text">Exp. Date</span>
                 <span class="dados__finais">(mm/yy)</span>
                 <span class="dados__finais">CVC</span>
-                <input type="text" class="dados-finais__input exp" id="input_month" oninput="printMonth(this.value)" placeholder="MM" maxlength="2">
-                <input type="text" class="dados-finais__input" id="input_year" oninput="printYear(this.value)" placeholder="YY" maxlength="2">
+                <input type="text" class="dados-finais__input exp input" id="input_month" oninput="printMonth(this.value)" placeholder="MM" maxlength="2" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                <span class="warning__text month-warning month" id="warning_exp">Can't be blank</span>
+                <input type="text" class="dados-finais__input input" id="input_year" oninput="printYear(this.value)" placeholder="YY" maxlength="2" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                 <span class="warning__text month-warning" id="warning_exp">Can't be blank</span> 
-                <input type="text" class="dados-finais__input cvc" id="input_cvc" oninput="printCvc(this.value)" placeholder="CVC" maxlength="3">
+                <input type="text" class="dados-finais__input cvc input" id="input_cvc" oninput="printCvc(this.value)" placeholder="CVC" maxlength="3" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                 <span class="warning__text cvc-warning" id="warning_cvc">Can't be blank</span>
             </div>
             <button class="btn-confirm" id="btn_confirm_card">Confirm</button>
